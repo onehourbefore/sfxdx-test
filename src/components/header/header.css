@@ -1,0 +1,17 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #CDD2DD;
+}
+
+@media(max-width: 900px) {
+    .header {
+        padding: 0px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
