@@ -7,11 +7,11 @@
 .ellipse {
     position: absolute;
     background: red;
-    width: 30%;
-    height: 40%;
+    width: 10%;
+    height: 20%;
     border-radius: 100%;
     background: #3AC922;
-    opacity: 0.15;
+    opacity: 0.7;
     filter: blur(100px);
     transform: matrix(-0.42, -0.91, -0.91, 0.42, 0, 0);
 }
@@ -21,17 +21,17 @@
 }
 
 .topLeft {
-    animation: topLeft 50s linear infinite;
+    animation: topLeft 45s linear infinite;
 }
 
 @keyframes topLeft {
     0% {
-        top: 10%;
+        top: 20%;
         left: 0%;
     }
     25% {
         top: 40%;
-        left: 70%;
+        left: 60%;
     }
     50% {
         top: 40%;
@@ -48,13 +48,13 @@
 }
 
 .topRight {
-    animation: topRight 40s linear infinite;
+    animation: topRight 30s linear infinite;
 }
 
 @keyframes topRight {
     0% {
-        top: 10%;
-        right: 10%;
+        top: 20%;
+        right: 20%;
     }
     25% {
         top: 40%;
@@ -62,36 +62,36 @@
     }
     50% {
         top: 40%;
-        right: 10%;
+        right: 20%;
     }
     75% {
-        top: 10%;
+        top: 20%;
         right: 60%;
     }
     100% {
-        top: 10%;
-        right: 10%;
+        top: 20%;
+        right: 20%;
     }
 }
 
 .bottomLeft {
     bottom: 100px;
     left: 100px;
-    animation: bottomLeft 50s linear infinite;
+    animation: bottomLeft 45s linear infinite;
 }
 
 @keyframes bottomLeft {
     0% {
         bottom: 20%;
-        left: 0%;
+        left: 20%;
     }
     25% {
-        bottom: 40%;
+        bottom: 70%;
         left: 70%;
     }
     50% {
-        bottom: 40%;
-        left: 0%;
+        bottom: 70%;
+        left: 20%;
     }
     75% {
         bottom: 20%;
@@ -99,21 +99,21 @@
     }
     100% {
         bottom: 20%;
-        right: 0%;
+        right: 20%;
     }
 }
 
 .bottomRight {
-    animation: bottomRight 45s linear infinite;
+    animation: bottomRight 30s linear infinite;
 }
 
 @keyframes bottomRight {
     0% {
         bottom: 20%;
-        right: 10%;
+        right: 20%;
     }
     25% {
-        bottom: 40%;
+        bottom: 70%;
         right: 70%;
     }
     50% {
@@ -121,11 +121,11 @@
         right: 70%;
     }
     75% {
-        bottom: 40%;
-        right: 10%;
+        bottom: 70%;
+        right: 20%;
     }
     100% {
         bottom: 20%;
-        right: 10%;
+        right: 20%;
     }
 }

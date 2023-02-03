@@ -16,7 +16,7 @@ const Button: React.FC<PropsType> = (
 ) => {
     const { ethereum } = window;
     const dispatch = useAppDispatch();
-    const { userAccount, status } = useAppSelector(state => state.connectionReducer);
+    const { userAccount } = useAppSelector(state => state.connectionReducer);
 
     const getShortToken = (str: string) => {
         return str.slice(0, 11) + '...' + str.slice(-4);
@@ -43,8 +43,6 @@ const Button: React.FC<PropsType> = (
                 : "button active"}
             onClick={connectHandler}
         >
-            {status === 'loading'
-                && <div className="button__loader"></div>}
 
             {userAccount &&
                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
