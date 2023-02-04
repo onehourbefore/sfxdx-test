@@ -1,8 +1,9 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import ethereum from '../../data/ethereumProvider';
 
 type ConnectionState = {
     userAccount: string;
-    status: 'loading' | 'success' | 'error' | '';
+    status: string;
 }
 
 const initialState: ConnectionState = {
@@ -12,7 +13,7 @@ const initialState: ConnectionState = {
 
 export const connectToMetamask = createAsyncThunk(
     'connectToMetamask',
-    async(ethereum: any, { rejectWithValue }) => {
+    async(_, { rejectWithValue }) => {
         try {
             if(!ethereum) {
                 alert('Подключитесь к Метамаск!');
@@ -43,8 +44,8 @@ export const postsSlice = createSlice({
             state.userAccount = action.payload;
             state.status = 'success';
         })
-        .addCase(connectToMetamask.rejected, (state) => {
-            state.status = 'error';
+        .addCase(connectToMetamask.rejected, (state, action: any) => {
+            state.status = action.payload;
         })
         
         .addDefaultCase (() => {})

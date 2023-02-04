@@ -15,3 +15,14 @@
         justify-content: space-between;
     }
 }
+
+@media(max-width: 450px) {
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__logo {
+        display: none;
+    }
+}

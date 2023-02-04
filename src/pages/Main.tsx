@@ -2,10 +2,11 @@ import React from 'react';
 import './main.css';
 
 const Main = () => {
+
     return (
-        <div className="mainPage">
+        <main className="mainPage">
             MAIN PAGE
-        </div>
+        </main>
     );
 };
 

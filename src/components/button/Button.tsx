@@ -1,11 +1,10 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../store';
 import { connectToMetamask } from '../../store/connectionSlice';
+import ethereum from '../../data/ethereumProvider';
 
 import "./button.css";
 
-
-declare let window: any;
 
 type PropsType = {
     children: string;
@@ -14,7 +13,6 @@ type PropsType = {
 const Button: React.FC<PropsType> = (
     { children }
 ) => {
-    const { ethereum } = window;
     const dispatch = useAppDispatch();
     const { userAccount } = useAppSelector(state => state.connectionReducer);
 
@@ -22,7 +20,7 @@ const Button: React.FC<PropsType> = (
         return str.slice(0, 11) + '...' + str.slice(-4);
     }
 
-    const connectHandler = () => dispatch(connectToMetamask(ethereum));
+    const connectHandler = () => dispatch(connectToMetamask());
 
     const chainChangedHandler = () => window.location.reload();
 
@@ -39,8 +37,8 @@ const Button: React.FC<PropsType> = (
     return (
         <div
             className={!userAccount
-                ? "button"
-                : "button active"}
+                ? "header__button"
+                : "header__button active"}
             onClick={connectHandler}
         >
 
